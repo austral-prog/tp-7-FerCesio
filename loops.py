@@ -1,6 +1,6 @@
 def index_of_by_index(x,y,z):
     index = -1
-    if x in y:
+    if x in y[z::]:
         index = y[z::].index(x)
         index = index+z 
     return index
@@ -34,6 +34,6 @@ put("Blue",["Red", "Green", "", "", "Pink", "", "Black"])
 def remove(x, list):
     a = list.count(x)
     while x in list:
-        del list[list.index(x)]
+        list[list.index(x)] = ""
     return a
 remove("Blue",["Red", "Green", "White", "Black", "Pink", "Yellow", "Black"])
